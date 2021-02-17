@@ -1,7 +1,7 @@
 {
   "info": {
-    "url_png_icon_64x64": "",
-    "url_png_logo": "",
+    "url_png_icon_64x64": "https://lemon-pool.com/img/pool-icon.png",
+    "url_png_logo": "https://lemon-pool.com/img/pool-about-banner.jpg",
     "location": "Cuba Havana",
     "social": {
       "twitter_handle": "",
@@ -21,8 +21,8 @@
       "vat_id": ""
     },
     "about": {
-      "me": "We are a team of cuban engineers friends (Leo, Erick, Javier, Yasman) who believe in Cardano vision, we like Fuu things and drink a lot those fresh shots with rum and lemons",
-      "server": "Reliable cloud lemons based servers",
+      "me": "We are a team of cuban engineers friends who believe in Cardano vision, we support descentralization and we think Cardano will improve financial services for countries in development like Cuba",
+      "server": "Reliable cloud based servers with (4 vCPU Cores/ 8GB RAM/ 200GB SSD Disk) each",
       "company": ""
     },
     "rss": ""
