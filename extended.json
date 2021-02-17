@@ -1,0 +1,39 @@
+{
+  "info": {
+    "url_png_icon_64x64": "",
+    "url_png_logo": "",
+    "location": "Cuba Havana",
+    "social": {
+      "twitter_handle": "",
+      "telegram_handle": "",
+      "facebook_handle": "",
+      "youtube_handle": "",
+      "twitch_handle": "",
+      "discord_handle": "",
+      "github_handle": ""
+    },
+    "company": {
+      "name": "Lemon Cardano Stake Pool",
+      "addr": "",
+      "city": "",
+      "country": "",
+      "company_id": "",
+      "vat_id": ""
+    },
+    "about": {
+      "me": "We are a team of cuban engineers friends (Leo, Erick, Javier, Yasman) who believe in Cardano vision, we like Fuu things and drink a lot those fresh shots with rum and lemons",
+      "server": "Reliable cloud lemons based servers",
+      "company": ""
+    },
+    "rss": ""
+  },
+  "telegram-admin-handle": {
+    "0": ""
+  },
+  "my-pool-ids": {
+    "0": ""
+  },
+  "when-satured-then-recommend": {
+    "0": ""
+  }
+}
