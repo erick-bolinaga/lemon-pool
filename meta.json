@@ -3,5 +3,5 @@
  "description": "Cuban Stake Pool supporting Cardano's vision",
  "ticker": "LEMON",
  "homepage": "https://lemon-pool.com",
- "extended": ""
+ "extended": "https://lemon-pool.com/extended.json"
 }
