@@ -5,7 +5,7 @@
     "location": "Cuba Havana",
     "social": {
       "twitter_handle": "Leo_Delegator",
-      "telegram_handle": "Lemon_CubaPool",
+      "telegram_handle": "limonpool",
       "facebook_handle": "",
       "youtube_handle": "",
       "twitch_handle": "",
@@ -36,5 +36,5 @@
   "when-satured-then-recommend": {
     "0": ""
   },
-  "4cd8d9400fec972082cab86c93742aeb"
+  "4cd8d9400fec972082cab86c93742aeb": ""
 }
