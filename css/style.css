@@ -1,9 +1,96 @@
 html, body {
 	margin: 0;
 	min-height: 100vh;
-	background-color: black;
-	background-image: url(../img/logo.svg);
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: 500px;
+	background-color: white;
+	font-family: 'Montserrat', sans-serif;
+}
+.main-section {
+	background: rgb(2,0,36);
+	background: linear-gradient(50deg, rgba(2,0,36,1) 0%, rgba(173,0,255,1) 100%);
+	padding: 3rem;
+	min-height: calc(100vh - 6rem);
+}
+.page-header {
+	display: flex;
+	max-width: 1920px;
+	align-items: center;
+	margin: auto;
+	position: sticky;
+	top: 0;
+}
+.logo img {
+	height: 100px;
+}
+.main-menu {
+	margin-left: auto;
+}
+.main-menu ul li,
+.social-menu ul li {
+	list-style: none;
+	display: inline-flex;
+}
+.main-menu ul li a,
+.social-menu ul li a {
+	color: white;
+	text-decoration: none;
+}
+.main-menu ul li a {
+	font-weight: 500;
+	text-transform: uppercase;
+	position: relative;
+	padding: 0 1.5rem;
+	transition-duration: 0.3s;
+	opacity: 0.8;
+}
+.main-menu ul li a.active {
+	font-weight: 700;
+	opacity: 1;
+}
+.main-menu ul li a::after {
+	position: absolute;
+	width: 0;
+	height: 2px;
+	background: white;
+	bottom: -8px;
+	content: "";
+	left: 50%;
+	opacity: 0.8;
+	transition-duration: 0.3s;
+}
+.main-menu ul li a.active::after {
+	width: 20px;
+	left: calc(50% - 10px);
+	opacity: 1;
+}
+.main-menu ul li a:active,
+.main-menu ul li a:focus {
+	outline: none;
+}
+.social-menu {
+	margin-left: 1rem;
+}
+.social-menu ul li a {
+	font-size: 24px;
+	padding: 0 1rem;
+}
+.social-menu ul li a:hover {
+	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+	transform: translate3d(0, 0, 0);
+	backface-visibility: hidden;
+	perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
 }
