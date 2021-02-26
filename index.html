@@ -37,7 +37,7 @@
 				<nav class="main-menu">
 					<ul>
 						<li>
-							<a href="#top" class="active" scroller>Inicio</a>
+							<a href="#top" class="active" scroller>Home</a>
 						</li>
 						<li>
 							<a href="#pool-info" scroller>Pool info</a>
@@ -58,8 +58,50 @@
 					</ul>
 				</nav>
 			</header>
+			<div class="phrase-illustration">
+				<div class="phrase-container">
+					<h1>Driven from <strong>Cuba</strong> with warm love.</h1>
+					<h4>Collaborating with descentralization from <strong>Cuba</strong> by supporting <strong>Cardano™</strong>.</h4>
+					<a href="#pool-info" class="cta" scroller>Pool information</a>
+				</div>
+				<div class="illustration-container">
+					
+				</div>
+			</div>
+		</section>
+		<section id="pool-info" class="pool-info">
+			<h1>Pool information</h1>
+			<div class="pool-info-tiles">
+				<div>
+					<h4 class="pool-info-tile-title">Fixed fee</h4>
+					<h1 class="pool-info-tile-value" id="2dd26a3b9dd2372c8c483c730d2a47a6f51e51c06b4a9c248f6dd3ac_tax_fix"></h1>
+				</div>
+				<div>
+					<h4 class="pool-info-tile-title">Margin fee</h4>
+					<h1 class="pool-info-tile-value" id="2dd26a3b9dd2372c8c483c730d2a47a6f51e51c06b4a9c248f6dd3ac_tax_ratio">1%</h1>
+				</div>
+				<div>
+					<h4 class="pool-info-tile-title">Live stake</h4>
+					<h1 class="pool-info-tile-value">~</h1>
+				</div>
+				<div>
+					<h4 class="pool-info-tile-title">Active stake</h4>
+					<h1 class="pool-info-tile-value">~</h1>
+				</div>
+			</div>
 		</section>
 	</div>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script>
+		$.getJSON('https://js.adapools.org/pools/2dd26a3b9dd2372c8c483c730d2a47a6f51e51c06b4a9c248f6dd3ac/summary.json', function(data) { 
+			$.each( data.data, function( i, val ) { 
+				a = new Array('tax_fix','pledge','total_stake');
+				if (a.includes(i)) val = Math.round(parseInt(val) / 1000000);
+				if (i == 'blocks_lifetime') val = parseInt(val) + parseInt(data.data.blocks_epoch);
+				$('#2dd26a3b9dd2372c8c483c730d2a47a6f51e51c06b4a9c248f6dd3ac_'+i).html(val).text();   
+			}); 
+		});
+	</script>
 </body>
 </html>
