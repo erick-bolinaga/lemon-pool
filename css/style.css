@@ -6,14 +6,14 @@ html, body {
 	font-family: 'Montserrat', sans-serif;
 }
 .splash-section {
-	padding: 13rem 0 3rem;
+	padding: 13rem 3rem 3rem;
 	min-height: calc(80vh - 6rem);
 }
 /* header */
 .page-header {
 	position: fixed;
-	padding: 3rem 0;
-	width: 100%;
+	padding: 3rem;
+	width: calc(100% - 6rem);
 	transition-duration: 0.3s;
 }
 .page-header .header-inner {
@@ -125,11 +125,11 @@ html, body {
 /* pool info */
 .pool-info {
 	background-color: white;
-	padding-top: 3rem;
+	padding: 3rem 3rem 0;
 }
 .pool-info-tiles {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
+	grid-template-columns: repeat(3, 1fr);
 	gap: 52px;
 	padding: 2rem 0;
 }
@@ -163,7 +163,7 @@ h1.pool-info-tile-value {
 /* about */
 .about {
 	background-color: white;
-	padding-top: 3rem;
+	padding: 3rem 3rem 0;
 }
 .about-sections {
 	display: flex;
