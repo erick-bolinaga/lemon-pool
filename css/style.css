@@ -1,26 +1,43 @@
 html, body {
 	margin: 0;
 	min-height: 100vh;
-	background-color: white;
+	background: rgb(2,0,36);
+	background: linear-gradient(80deg, rgba(2,0,36,1) 0%, rgba(173,0,255,1) 100%);
 	font-family: 'Montserrat', sans-serif;
 }
-.main-section {
-	background: rgb(2,0,36);
-	background: linear-gradient(50deg, rgba(2,0,36,1) 0%, rgba(173,0,255,1) 100%);
-	padding: 3rem;
+.splash-section {
+	padding: 13rem 0 3rem;
 	min-height: calc(80vh - 6rem);
 }
 /* header */
 .page-header {
+	position: fixed;
+	padding: 3rem 0;
+	width: 100%;
+	transition-duration: 0.3s;
+}
+.page-header .header-inner {
 	display: flex;
 	max-width: 1920px;
 	align-items: center;
 	margin: auto;
-	position: sticky;
-	top: 0;
+}
+.page-header.fixed .header-inner {
+	background: rgba(47, 1, 70, 0.68);
+	border-radius: 20px;
+	padding: 0 1rem 0 2rem;
+	top: 2rem;
+	transition-duration: 0.3s;
+}
+.page-header.fixed .logo {
+	padding: 2rem 0;
+}
+.page-header.fixed .logo img {
+	height: 40px;
 }
 .logo img {
 	height: 100px;
+	transition-duration: 0.3s
 }
 .main-menu {
 	margin-left: auto;
@@ -85,8 +102,6 @@ html, body {
 .phrase-illustration {
 	display: flex;
 	align-items: center;
-	max-width: 1920px;
-	margin: auto;
 	padding: 3rem 0;
 	justify-content: space-between;
 }
@@ -109,13 +124,8 @@ html, body {
 
 /* pool info */
 .pool-info {
-	max-width: 1920px;
-	margin: auto;
-}
-.pool-info h1 {
-	font-weight: 700;
-	font-size: 48px;
-	color: #333;
+	background-color: white;
+	padding-top: 3rem;
 }
 .pool-info-tiles {
 	display: grid;
@@ -150,7 +160,30 @@ h1.pool-info-tile-value {
 	line-height: 1
 }
 
+/* about */
+.about {
+	background-color: white;
+	padding-top: 3rem;
+}
+.about-sections {
+	display: flex;
+}
+.about-text {
+	max-width: 50%;
+	font-size: 18px;
+	line-height: 2;
+}
+
 /* common */
+h1.section-title {
+	font-weight: 700;
+	font-size: 48px;
+	color: #333;
+}
+.inner {
+	max-width: 1920px;
+	margin: auto;
+}
 strong {
 	font-weight: 700;
 }

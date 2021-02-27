@@ -42,3 +42,17 @@ menuEl.forEach((el) => {
     _target.classList.add('active');
   }, false);
 })
+$(document).ready(function() {
+  if ($(document).scrollTop() >= 100) {
+    $(".page-header").addClass("fixed");
+  } else {
+    $(".page-header").removeClass("fixed");
+  }
+  $(document).scroll(function() {
+    if ($(document).scrollTop() >= 100) {
+      $(".page-header").addClass("fixed");
+    } else {
+      $(".page-header").removeClass("fixed");
+    }
+  });
+});
