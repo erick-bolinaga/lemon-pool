@@ -15,6 +15,7 @@ html, body {
 	padding: 3rem;
 	width: calc(100% - 6rem);
 	transition-duration: 0.3s;
+	z-index: 99;
 }
 .page-header .header-inner {
 	display: flex;
@@ -101,12 +102,12 @@ html, body {
 /* Phrase - illustration */
 .phrase-illustration {
 	display: flex;
-	align-items: center;
-	padding: 3rem 0;
+	padding: 0;
 	justify-content: space-between;
 }
 .phrase-container {
 	color: white;
+	margin-top: 7rem;
 }
 .phrase-container h1,
 .phrase-container h4 {
@@ -114,12 +115,16 @@ html, body {
 	max-width: 480px;
 }
 .phrase-container h1 {
-	font-size: 48px;
+	font-size: 52px;
 }
 .phrase-container h4 {
 	font-size: 18px;
 	max-width: 380px;
 	margin-top: 4rem;
+}
+.illustration-container {
+	transform: scale(1.2);
+	z-index: 1;
 }
 
 /* pool info */
@@ -143,6 +148,19 @@ html, body {
 	justify-content: center;
 	flex-direction: column;
 }
+.ada-price-tile {
+	box-shadow: 0 20px 80px rgba(216, 216, 216, 0.85);
+	border-radius: 20px;
+	background-color: white;
+	padding: 4rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: white;
+	margin-bottom: 4rem;
+	margin-top: 52px;
+}
 .pool-info-tile-title {
 	color: #4F4F4F;
 	font-size: 22px;
@@ -158,6 +176,11 @@ h1.pool-info-tile-value {
 	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	margin: 2rem 0 0;
 	line-height: 1
+}
+h1.pool-info-tile-value#ada-price {
+	background: -webkit-linear-gradient(45deg, #01C83C 3.62%, #00A3FF 97.52%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 /* about */
@@ -181,7 +204,7 @@ h1.section-title {
 	color: #333;
 }
 .inner {
-	max-width: 1920px;
+	max-width: 1480px;
 	margin: auto;
 }
 strong {
