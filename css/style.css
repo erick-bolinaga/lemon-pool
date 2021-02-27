@@ -1,13 +1,13 @@
 html, body {
 	margin: 0;
 	min-height: 100vh;
-	background: rgb(2,0,36);
-	background: linear-gradient(80deg, rgba(2,0,36,1) 0%, rgba(173,0,255,1) 100%);
 	font-family: 'Montserrat', sans-serif;
 }
 .splash-section {
 	padding: 13rem 3rem 3rem;
 	min-height: calc(80vh - 6rem);
+	background: rgb(2,0,36);
+	background: linear-gradient(50deg, rgba(2,0,36,1) 0%, rgba(173,0,255,1) 100%);
 }
 /* header */
 .page-header {
@@ -92,7 +92,7 @@ html, body {
 	padding: 0 1rem;
 }
 .social-menu ul li a:hover {
-	animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+	animation: pop 0.4s cubic-bezier(.36,.07,.19,.97) infinite both;
 	transform: translate3d(0, 0, 0);
 	backface-visibility: hidden;
 	perspective: 1000px;
@@ -163,7 +163,7 @@ h1.pool-info-tile-value {
 /* about */
 .about {
 	background-color: white;
-	padding: 3rem 3rem 0;
+	padding: 3rem;
 }
 .about-sections {
 	display: flex;
@@ -206,17 +206,8 @@ strong {
 	transition-duration: 0.3s;
 }
 
-@keyframes shake {
-  10%, 90% {
-    transform: translate3d(-1px, 0, 0);
-  }  
-  20%, 80% {
-    transform: translate3d(2px, 0, 0);
-  }
-  30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0);
-  }
-  40%, 60% {
-    transform: translate3d(4px, 0, 0);
-  }
+@keyframes pop {
+    0% { transform: rotate(-15deg); }
+    50% { transform: rotate(15deg); }
+    100% { transform: rotate(-15deg); }
 }

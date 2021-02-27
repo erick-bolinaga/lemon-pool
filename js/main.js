@@ -33,7 +33,7 @@ scrollerEl.forEach((el) => {
     let targetEl = _target.getAttribute('href');
     doScrolling(targetEl, 1000);
   }, false);
-})
+});
 let menuEl = document.querySelectorAll(".main-menu ul li a");
 menuEl.forEach((el) => {
   el.addEventListener('click', function (e) {
@@ -41,7 +41,7 @@ menuEl.forEach((el) => {
     document.querySelector(".main-menu ul li a.active").classList.remove('active');
     _target.classList.add('active');
   }, false);
-})
+});
 $(document).ready(function() {
   if ($(document).scrollTop() >= 100) {
     $(".page-header").addClass("fixed");
