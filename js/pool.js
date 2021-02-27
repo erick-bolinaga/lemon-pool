@@ -8,8 +8,10 @@ $.getJSON('https://js.adapools.org/pools/2dd26a3b9dd2372c8c483c730d2a47a6f51e51c
 		let _newval = 0;
 		switch (i) {
 			case "pledge":
+			case "total_stake":
 				if (parseFloat(val) >= 1000) {
 					_newval = parseInt(val) / 1000;
+					_newval = Math.round((_newval + Number.EPSILON) * 100) / 100;
 				}
 				else {
 					_newval = val;
