@@ -24,7 +24,7 @@ html, body {
 	margin: auto;
 }
 .page-header.fixed .header-inner {
-	background: rgba(47, 1, 70, 0.68);
+	background: rgba(47, 1, 70, 0.8);
 	border-radius: 20px;
 	padding: 0 1rem 0 2rem;
 	top: 2rem;
@@ -148,7 +148,7 @@ html, body {
 	justify-content: center;
 	flex-direction: column;
 }
-.ada-price-tile {
+.hardware-specs-tile {
 	box-shadow: 0 20px 80px rgba(216, 216, 216, 0.85);
 	border-radius: 20px;
 	background-color: white;
@@ -160,6 +160,26 @@ html, body {
 	background-color: white;
 	margin-bottom: 4rem;
 	margin-top: 52px;
+}
+.hardware-specs-container {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	padding-top: 3rem;
+}
+.hardware-specs-container > div {
+	flex: auto;
+	text-align: center;
+}
+.hardware-specs-container > div i {
+	color: #CDDFE9;
+	font-size: 48px;
+}
+.hardware-specs-container > div h4 {
+	color: #799FB5;
+	font-size: 36px;
+	font-weight: 800;
+	margin-bottom: 0;
 }
 .pool-info-tile-title {
 	color: #4F4F4F;
@@ -183,6 +203,26 @@ h1.pool-info-tile-value#ada-price {
 	-webkit-text-fill-color: transparent;
 }
 
+/* footer */
+footer {
+	margin-top: 5rem;
+	background: linear-gradient(360deg, #1F072B 0%, #5D1C7D 100%);
+}
+footer .lemons {
+	background-image: url(../img/footer-lemons.png);
+	padding: 3rem;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+footer p {
+	font-size: 16px;
+	margin-top: 2rem;
+	color: white;
+	font-weight: 400;
+	margin-bottom: 0;
+}
+
 /* about */
 .about {
 	background-color: white;
@@ -192,12 +232,14 @@ h1.pool-info-tile-value#ada-price {
 	display: flex;
 }
 .about-text {
-	max-width: 50%;
 	font-size: 18px;
-	line-height: 2;
+	line-height: 2.1;
 }
 
 /* common */
+.centered {
+	text-align: center;
+}
 h1.section-title {
 	font-weight: 700;
 	font-size: 48px;
