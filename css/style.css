@@ -88,15 +88,33 @@ html, body {
 .social-menu {
 	margin-left: 1rem;
 }
+.social-menu ul {
+	align-items: center;
+	display: flex;
+}
 .social-menu ul li a {
 	font-size: 24px;
 	padding: 0 1rem;
 }
-.social-menu ul li a:hover {
+.social-menu ul li a:not(.lang):hover {
 	animation: pop 0.4s cubic-bezier(.36,.07,.19,.97) infinite both;
 	transform: translate3d(0, 0, 0);
 	backface-visibility: hidden;
 	perspective: 1000px;
+}
+.social-menu ul li a.lang {
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	line-height: 22px;
+	padding: 4px 7px 4px 4px;
+	border-radius: 25px;
+	background: rgba(47, 1, 70, 0.8);
+	margin-left: 1rem;
+	font-weight: 600;
+}
+.social-menu ul li a.lang img {
+	margin-right: 6px;
 }
 
 /* Phrase - illustration */
