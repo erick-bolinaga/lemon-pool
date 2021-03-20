@@ -24,8 +24,12 @@
 	<link rel="stylesheet" type="text/css" href="css/fontawesome/all.min.css" />
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="css/component.css" />
+	<link rel="stylesheet" type="text/css" href="css/content.css" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="icon" type="image/png" href="img/favicon.png" />
+
+	<script src="js/modernizr.custom.js"></script>
 </head>
 <body>
 	<div class="page-container" id="top">
@@ -69,7 +73,31 @@
 						<div class="phrase-container">
 							<h1>Driven from <strong>Cuba</strong> with warm love.</h1>
 							<h4>Collaborating with descentralization from <strong>Cuba</strong> by supporting <strong>Cardano™</strong>.</h4>
-							<a href="#pool-info" class="cta" scroller>Pool information</a>
+							<div class="morph-button morph-button-modal morph-button-modal-1 morph-button-fixed">								
+								<button type="button">Delegate</button>
+								<div class="morph-content">
+									<div>
+										<div class="content-style-text">
+											<span class="fas fa-times icon-close"></span>
+											<h2>How to delegate?</h2>
+											<p>1. Download <strong>Yoroi</strong> or <strong>Daedalus</strong> wallet apps from its <strong>official</strong> websites.</p>
+											<p class="text-center">
+												<a target="_blank" href="https://yoroi-wallet.com/#/" class="wallet-icon yoroi" aria-label="Yoroi Wallet">
+													<img src="img/yoroi-logo-symbol.svg" />
+												</a>
+												<a target="_blank" href="https://daedaluswallet.io/" class="wallet-icon daedalus" aria-label="Daedalus wallet">
+													<img src="img/daedalus-logo.svg" />
+												</a>
+											</p>
+											<p>2. Create <strong>Shelley</strong> wallet (store safely the secret words and the spending password).</p>
+											<p>3. Send funds <strong>ADA</strong> to the created wallet address.</p>
+											<p>4. Go to <strong>Staking / Delegation</strong> Center inside the app.</p>
+											<p>5. Search for <strong>LIMON</strong> Pool.</p>
+											<p>6. Click on the <strong>Delegate</strong> button.</p>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="illustration-container">
 							<img src="img/pool-illustration.png" />
@@ -162,6 +190,8 @@
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+	<script type="text/javascript" src="js/classie.js"></script>
+	<script type="text/javascript" src="js/uiMorphingButton_fixed.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script type="text/javascript" src="js/pool.js"></script>
 </body>

@@ -1,0 +1,222 @@
+/* Morph Button: Default Styles */
+
+.morph-button {
+	position: relative;
+	display: block;
+	margin-top: 5rem;
+}
+
+.morph-button > button {
+	overflow: hidden;
+	position: relative;
+	border: none;
+	background-color: #0C93FF;
+	border-radius: 27px;
+	font-size: 18px;
+	font-weight: 600;
+	color: white;
+	box-shadow: 0 20px 80px rgba(0, 163, 255, 0.5);
+	text-decoration: none;
+	padding: 1rem 2rem;
+	display: inline-flex;
+	transition-duration: 0.3s;
+	outline: none;
+	cursor: pointer;
+	justify-content: center;
+}
+
+.morph-button.open > button {
+	pointer-events: none;
+}
+
+.morph-content {
+	pointer-events: none;
+	border-radius: 27px;
+}
+
+.morph-button.open .morph-content {
+	pointer-events: auto;
+}
+
+/* Common styles for overlay and modal type (fixed morph) */
+.morph-button-fixed,
+.morph-button-fixed .morph-content {
+	width: 180px;
+	height: 54px;
+}
+
+.morph-button-fixed > button {
+	z-index: 1000;
+	width: 100%;
+	height: 100%;
+	-webkit-transition: opacity 0.1s 0.5s;
+	transition: opacity 0.1s 0.5s;
+}
+
+.morph-button-fixed.open > button {
+	opacity: 0;
+	-webkit-transition: opacity 0.1s;
+	transition: opacity 0.1s;
+}
+
+.morph-button-fixed .morph-content {
+	position: fixed;
+	z-index: 900;
+	opacity: 0;
+	-webkit-transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+	transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+}
+
+.morph-button-fixed.open .morph-content {
+	opacity: 1;
+}
+
+.morph-button-fixed .morph-content > div {
+	visibility: hidden;
+	height: 0;
+	opacity: 0;
+	-webkit-transition: opacity 0.1s, visibility 0s 0.1s, height 0s 0.1s;
+	transition: opacity 0.1s, visibility 0s 0.1s, height 0s 0.1s;
+}
+
+.morph-button-fixed.open .morph-content > div {
+	visibility: visible;
+	height: auto;
+	opacity: 1;
+	-webkit-transition: opacity 0.3s 0.5s;
+	transition: opacity 0.3s 0.5s;
+}
+
+.morph-button-fixed.active > button {
+	z-index: 2000;
+}
+
+.morph-button-fixed.active .morph-content {
+	z-index: 1900;
+}
+
+/* Morph Button Style: Modal */
+.morph-button-modal::before {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 800;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.5);
+	content: '';
+	opacity: 0;
+	-webkit-transition: opacity 0.5s;
+	transition: opacity 0.5s;
+	pointer-events: none;
+}
+
+.morph-button-modal.open::before {
+	opacity: 1;
+	pointer-events: auto;
+}
+
+.morph-button-modal.active::before {
+	z-index: 1800;
+}
+
+.morph-button-modal .morph-content {
+	overflow: hidden;
+	-webkit-transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+	transition: opacity 0.3s 0.5s, width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+}
+
+.morph-button-modal.open .morph-content {
+	top: calc(50% - 330px) !important;
+	left: calc(50% - 300px) !important;
+	margin: 0;
+	width: 600px;
+	height: 580px;
+	-webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+	transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s, margin 0.4s 0.1s;
+}
+.morph-button-modal.open .morph-content.es {
+	height: 660px;
+}
+
+/* Colors and sizes for individual modals */
+.morph-button.morph-button-modal-1 {
+	float: left;
+}
+
+.morph-button-modal-1 .morph-content {
+	background-color: white;
+}
+
+/* Let's add some nice easing for all cases */
+.morph-button .morph-content,
+.morph-button.open .morph-content {
+	-webkit-transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+	transition-timing-function: cubic-bezier(0.7,0,0.3,1);
+}
+
+/* Helper classes */
+.noscroll {
+	overflow: hidden;
+}
+
+/* No JS fallback: let's hide the button and show the content */
+.no-js .morph-button > button {
+	display: none;
+}
+
+.no-js .morph-button {
+	margin: 10px 0;
+	float: none;
+}
+
+.no-js .morph-button,
+.no-js .morph-button .morph-content,
+.no-js .morph-button .morph-content > div {
+	position: relative;
+	width: auto;
+	height: auto;
+	opacity: 1;
+	visibility: visible;
+	top: auto;
+	left: auto;
+	-webkit-transform: none;
+	transform: none;
+	pointer-events: auto;
+}
+
+.no-js .morph-button .morph-content .icon-close {
+	display: none;
+}
+
+.no-transition {
+	-webkit-transition: none !important;
+	transition: none !important;
+}
+
+/* Media Queries */
+
+@media screen and (max-width: 600px) {
+	.morph-button-modal.open .morph-content {
+		top: 0% !important;
+		left: 0% !important;
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		overflow-y: scroll;
+		-webkit-transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
+		transition: width 0.4s 0.1s, height 0.4s 0.1s, top 0.4s 0.1s, left 0.4s 0.1s;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.morph-button-fixed,
+	.morph-button-fixed .morph-content {
+		width: 200px;
+		height: 80px;
+	}
+
+	.morph-button-fixed > button {
+		font-size: 75%;
+	}
+}

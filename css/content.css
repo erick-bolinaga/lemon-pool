@@ -1,0 +1,68 @@
+/* Icons */
+.icon-close {
+	z-index: 100;
+	display: block;
+	overflow: hidden;
+	width: 3em;
+	height: 3em;
+	text-align: center;
+	line-height: 3;
+	cursor: pointer;
+}
+.icon-close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+}
+
+.icon-close:hover {
+	color: #a50a05;
+}
+
+/* Style for text modal */
+.content-style-text {
+	padding: 60px;
+	text-align: left;
+}
+
+.content-style-text h2 {
+	margin: 0 0 0.5em 0;
+	font-weight: 300;
+	font-size: 1.85em;
+	color: #333333;
+}
+
+.content-style-text p {
+	color: #333333;
+	font-weight: 300;
+	font-size: 1.15em;
+	line-height: 1.4;
+}
+
+.content-style-text label {
+    padding: 10px;
+    color: #f9e1c9;
+    font-weight: bold;
+}
+
+.content-style-text .icon-close {
+	top: 0px;
+	right: 0px;
+	color: rgba(0,0,0,0.2);
+	font-size: 28px;
+}
+
+.content-style-text .icon-close:hover {
+	color: #54008d;
+}
+
+@media screen and (max-width: 770px) {
+	.content-style-overlay {
+		font-size: 75%;
+	}
+
+	.content-style-overlay .icon-close {
+		top: 5px;
+		right: 5px;
+	}
+}

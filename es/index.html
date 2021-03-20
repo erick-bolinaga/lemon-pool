@@ -23,9 +23,13 @@
 
 	<link rel="stylesheet" type="text/css" href="../css/fontawesome/all.min.css" />
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../css/component.css" />
+	<link rel="stylesheet" type="text/css" href="../css/content.css" />
 	<link rel="stylesheet" type="text/css" href="../css/style.css" />
 	<link rel="icon" type="image/png" href="../img/favicon.png" />
+
+	<script src="../js/modernizr.custom.js"></script>
 </head>
 <body>
 	<div class="page-container" id="top">
@@ -69,7 +73,31 @@
 						<div class="phrase-container">
 							<h1>Administrado desde <strong>Cuba</strong> con amor.</h1>
 							<h4>Colaborando con la descentralización desde <strong>Cuba</strong> apoyando <strong>Cardano™</strong>.</h4>
-							<a href="#pool-info" class="cta" scroller>Información del Pool</a>
+							<div class="morph-button morph-button-modal morph-button-modal-1 morph-button-fixed">								
+								<button type="button">Delegar</button>
+								<div class="morph-content es">
+									<div>
+										<div class="content-style-text">
+											<span class="fas fa-times icon-close"></span>
+											<h2>¿Cómo delegar?</h2>
+											<p>1. Descarga las billeteras <strong>Yoroi</strong> o <strong>Daedalus</strong> de sus sitios <strong>oficiales</strong>.</p>
+											<p class="text-center">
+												<a target="_blank" href="https://yoroi-wallet.com/#/" class="wallet-icon yoroi" aria-label="Yoroi Wallet">
+													<img src="../img/yoroi-logo-symbol.svg" />
+												</a>
+												<a target="_blank" href="https://daedaluswallet.io/" class="wallet-icon daedalus" aria-label="Daedalus Wallet">
+													<img src="../img/daedalus-logo.svg" />
+												</a>
+											</p>
+											<p>2. Crea una billetera <strong>Shelley</strong> (guarda de forma segura las palabras secretas y la contraseña de gastos).</p>
+											<p>3. Envía fondos <strong>ADA</strong> a la dirección de la billetera creada.</p>
+											<p>4. Accede al centro de <strong>Delegación / Staking</strong> en la aplicación.</p>
+											<p>5. Busca el Pool <strong>LIMON</strong>.</p>
+											<p>6. Clic en el botón <strong>Delegar</strong></p>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 						<div class="illustration-container">
 							<img src="../img/pool-illustration.png" />
@@ -162,6 +190,8 @@
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
+	<script type="text/javascript" src="../js/classie.js"></script>
+	<script type="text/javascript" src="../js/uiMorphingButton_fixed.js"></script>
 	<script type="text/javascript" src="../js/main.js"></script>
 	<script type="text/javascript" src="../js/pool.js"></script>
 </body>

@@ -273,7 +273,82 @@ footer p {
 	line-height: 2.1;
 }
 
+/* wallet icons */
+.wallet-icon {
+	text-decoration: none;
+	display: inline-block;
+	transition-duration: 0.3s;
+	border-radius: 18px;
+	margin: 0 12px;
+	position: relative;
+	outline: none;
+}
+.wallet-icon:hover {
+	box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
+}
+.wallet-icon img {
+	height: 40px;
+	display: block;
+	padding: 12px;
+}
+.wallet-icon.yoroi:hover {
+	background-color: rgb(49, 83, 203);
+}
+.wallet-icon.daedalus:hover {
+	background-color: rgb(19, 19, 37);
+}
+.wallet-icon.yoroi:hover img {
+	filter: brightness(0) invert(1);
+	-webkit-filter: brightness(0) invert(1);
+}
+.wallet-icon::before {
+    position: absolute;
+    top: -66px;
+    left: calc(50% - 90px);
+    background: rgba(47, 1, 70, 0.8);
+    border-radius: 27px;
+    color: #fff;
+    content: attr(aria-label);
+    padding: 1rem;
+    text-transform: none;
+    transition: all 0.5s ease;
+    width: 160px;
+}
+.wallet-icon::after {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid rgba(47, 1, 70, 0.8);
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+    margin-left: -5px;
+    width: 0;
+}
+.wallet-icon::before,
+.wallet-icon::after {
+    color: #efefef;
+    font-family: monospace;
+    font-size: 16px;
+    opacity: 0;
+    pointer-events: none;
+    text-align: center;
+}
+.wallet-icon:focus::before,
+.wallet-icon:focus::after,
+.wallet-icon:hover::before,
+.wallet-icon:hover::after {
+    opacity: 1;
+    transition: all 0.75s ease;
+}
+
 /* common */
+.text-center {
+	text-align: center;
+}
+
 .centered {
 	text-align: center;
 }
@@ -302,6 +377,7 @@ strong {
 	display: inline-flex;
 	transition-duration: 0.3s;
 	outline: none;
+	cursor: pointer;
 }
 .cta:hover {
 	box-shadow: 0 10px 50px rgba(0, 0, 0, 0.2);
