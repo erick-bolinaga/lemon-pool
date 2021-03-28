@@ -5,7 +5,6 @@ html, body {
 }
 .splash-section {
 	padding: 13rem 0 0;
-	min-height: calc(60vh - 6rem);
 	background: rgb(2,0,36);
 	background: linear-gradient(50deg, rgba(2,0,36,1) 0%, rgba(173,0,255,1) 100%);
 }
@@ -153,14 +152,13 @@ html, body {
 	background-size: calc(100% + 3px) auto;
 	padding: 0 3rem 6rem;
 	height: 100%;
-	min-height: calc(60vh - 6rem);
 	position: relative;
 }
 
 /* stamp */
 .stamp {
 	display: block;
-	margin: 3rem auto 0;
+	margin: 3rem auto 5rem;
 }
 
 /* pool info */
