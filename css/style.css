@@ -14,7 +14,7 @@ html, body {
 	padding: 3rem;
 	width: calc(100% - 6rem);
 	transition-duration: 0.3s;
-	z-index: 99;
+	z-index: 9999;
 }
 .page-header .header-inner {
 	display: flex;
@@ -22,9 +22,12 @@ html, body {
 	align-items: center;
 	margin: auto;
 }
+.page-header.fixed {
+	padding: 0;
+	width: 100%;
+}
 .page-header.fixed .header-inner {
 	background: rgba(47, 1, 70, 0.8);
-	border-radius: 20px;
 	padding: 0 1rem 0 2rem;
 	top: 2rem;
 	transition-duration: 0.3s;
@@ -269,6 +272,59 @@ footer p {
 .about-text {
 	font-size: 18px;
 	line-height: 2.1;
+	box-shadow: 0 20px 80px rgba(216, 216, 216, 0.85);
+	border-radius: 20px;
+	background-color: white;
+	padding: 4rem;
+}
+
+/* faq */
+.faq {
+	padding: 3rem;
+}
+.faq-text {
+	font-size: 18px;
+	line-height: 2.1;
+	box-shadow: 0 20px 80px rgba(216, 216, 216, 0.85);
+	border-radius: 20px;
+	background-color: white;
+	padding: 4rem;
+}
+.faq-question {
+	font-weight: 700;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+	align-items: center;
+	cursor: pointer;
+	transition-duration: 0.3s;
+	color: #333333;
+}
+.faq-question:hover {
+	color: #666666;
+}
+.faq-question .fa-minus {
+	display: none;
+}
+.faq-answer {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+.faq-question.active + .faq-answer {
+	margin-bottom: 2rem;
+}
+.faq-question.active .fa-minus {
+	display: inline;
+}
+.faq-question.active .fa-plus {
+	display: none;
+}
+.faq-item:last-child .faq-question:not(.active) {
+	margin-bottom: 0;
+}
+.faq-item:last-child .faq-question.active + .faq-answer {
+	margin-bottom: 0;
 }
 
 /* wallet icons */
@@ -468,10 +524,6 @@ strong {
 		background: transparent;
 		top: 34px;
 		right: 2rem;
-	}
-	.page-header.fixed {
-		padding: 1rem;
-		width: calc(100% - 2rem);
 	}
 	.pool-info-tiles {
 		grid-template-columns: 1fr;
