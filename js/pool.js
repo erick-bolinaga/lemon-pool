@@ -9,14 +9,21 @@ $.getJSON('https://js.adapools.org/pools/2dd26a3b9dd2372c8c483c730d2a47a6f51e51c
 			case "pledge":
 			case "total_stake":
 			case "active_stake":
-				if (parseFloat(val) >= 1000) {
+        let num_format = "";
+				if (parseFloat(val) >= 999 && parseFloat(val) < 1000000) {
 					_newval = parseInt(val) / 1000;
 					_newval = Math.round((_newval + Number.EPSILON) * 100) / 100;
+          num_format = "k";
 				}
+        else if (parseFloat(val) > 1000000) {
+          _newval = parseInt(val) / 1000000;
+          _newval = Math.round((_newval + Number.EPSILON) * 100) / 100;
+          num_format = "<small>M</small>";
+        }
 				else {
 					_newval = val;
 				}
-				$('#2dd26a3b9dd2372c8c483c730d2a47a6f51e51c06b4a9c248f6dd3ac_'+i).html(_newval + "k").text();
+				$('#2dd26a3b9dd2372c8c483c730d2a47a6f51e51c06b4a9c248f6dd3ac_'+i).html(_newval + num_format).text();
 				break;
 			case "tax_ratio":
 			case "roa":
