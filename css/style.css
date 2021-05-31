@@ -25,9 +25,9 @@ html, body {
 .page-header.fixed {
 	padding: 0;
 	width: 100%;
+	background: rgba(47, 1, 70, 0.8);
 }
 .page-header.fixed .header-inner {
-	background: rgba(47, 1, 70, 0.8);
 	padding: 0 1rem 0 2rem;
 	top: 2rem;
 	transition-duration: 0.3s;
