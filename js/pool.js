@@ -1,5 +1,6 @@
 $.getJSON('https://js.adapools.org/pools/2dd26a3b9dd2372c8c483c730d2a47a6f51e51c06b4a9c248f6dd3ac/summary.json', function(data) {
-	$.each( data.data, function( i, val ) {
+	console.log(data.data);
+  $.each( data.data, function( i, val ) {
 		a = new Array('tax_fix','pledge','total_stake', 'active_stake');
 		if (a.includes(i)) val = Math.round(parseInt(val) / 1000000);
 		if (i == 'blocks_lifetime') val = parseInt(val) + parseInt(data.data.blocks_epoch);
@@ -26,10 +27,14 @@ $.getJSON('https://js.adapools.org/pools/2dd26a3b9dd2372c8c483c730d2a47a6f51e51c
 				$('#2dd26a3b9dd2372c8c483c730d2a47a6f51e51c06b4a9c248f6dd3ac_'+i).html(_newval + num_format).text();
 				break;
 			case "tax_ratio":
-			case "roa":
 				_newval = parseFloat(val) * 100;
 				$('#2dd26a3b9dd2372c8c483c730d2a47a6f51e51c06b4a9c248f6dd3ac_'+i).html(_newval + "%").text();
 				break;
+      case "roa":
+        _newval = parseFloat(val);
+        _newval = Math.round((_newval + Number.EPSILON) * 100) / 100;
+        $('#2dd26a3b9dd2372c8c483c730d2a47a6f51e51c06b4a9c248f6dd3ac_'+i).html(_newval + "%").text();
+        break;
 			default:
 				val = val ? val : 0;
 				$('#2dd26a3b9dd2372c8c483c730d2a47a6f51e51c06b4a9c248f6dd3ac_'+i).html(val).text();
